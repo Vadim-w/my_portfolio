@@ -1,0 +1,22 @@
+.footerBlock {
+    height: 50vh;
+    background-color: darkseagreen;
+}
+
+.footerContainer {
+    align-items: center;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.title {
+    background-color: darkgray;
+}
+
+.socialNetworks {
+    border: 1px solid;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
