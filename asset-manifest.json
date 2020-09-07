@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/Vadim-w/my_portfolio.git/static/css/main.f41dc3d8.chunk.css",
+    "main.js": "/Vadim-w/my_portfolio.git/static/js/main.c93a5d57.chunk.js",
+    "main.js.map": "/Vadim-w/my_portfolio.git/static/js/main.c93a5d57.chunk.js.map",
+    "runtime-main.js": "/Vadim-w/my_portfolio.git/static/js/runtime-main.a98aa34d.js",
+    "runtime-main.js.map": "/Vadim-w/my_portfolio.git/static/js/runtime-main.a98aa34d.js.map",
+    "static/js/2.af73d1f3.chunk.js": "/Vadim-w/my_portfolio.git/static/js/2.af73d1f3.chunk.js",
+    "static/js/2.af73d1f3.chunk.js.map": "/Vadim-w/my_portfolio.git/static/js/2.af73d1f3.chunk.js.map",
+    "index.html": "/Vadim-w/my_portfolio.git/index.html",
+    "precache-manifest.decc22536f8a1c1ab7ecc6bc08cb3254.js": "/Vadim-w/my_portfolio.git/precache-manifest.decc22536f8a1c1ab7ecc6bc08cb3254.js",
+    "service-worker.js": "/Vadim-w/my_portfolio.git/service-worker.js",
+    "static/css/main.f41dc3d8.chunk.css.map": "/Vadim-w/my_portfolio.git/static/css/main.f41dc3d8.chunk.css.map",
+    "static/js/2.af73d1f3.chunk.js.LICENSE.txt": "/Vadim-w/my_portfolio.git/static/js/2.af73d1f3.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.a98aa34d.js",
+    "static/js/2.af73d1f3.chunk.js",
+    "static/css/main.f41dc3d8.chunk.css",
+    "static/js/main.c93a5d57.chunk.js"
+  ]
+}
