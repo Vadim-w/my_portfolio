@@ -17,7 +17,7 @@ export const Footer = (props: footerPropsType) => {
                     <SocialNetwork/>
                     <SocialNetwork/>
                 </div>
-                <span>2020 Все права защищены</span>
+                <div className={styles.copyright}> © 2020 Все права защищены</div>
             </div>
         </div>
     )
