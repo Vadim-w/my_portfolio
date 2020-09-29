@@ -1,10 +1,28 @@
 .project {
     width: 250px;
-    background-color: darkgrey;
+    background-color: #1f2235;
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
+
+}
+
+.project h3 {
+    font-family: inherit;
+    font-size: 1.25rem;
+    color: #fff;
+}
+
+.project p {
+    font-family: Poppins, sans-serif;
+    font-style: normal;
+    color: #dfdfdf;
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0;
+    margin-inline-end: 0;
 }
 
 .icon {
@@ -19,4 +37,8 @@
     margin: 120px auto;
     background-color: darkgrey;
     opacity: 0.7;
+}
+
+.projectDescription {
+    padding: 10px;
 }
