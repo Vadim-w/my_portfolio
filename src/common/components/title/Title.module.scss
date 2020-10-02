@@ -1,0 +1,29 @@
+@import '../../styles/sass/variables.sass';
+
+.titleBlock {
+  margin: 0 0 30px;
+  font-family: inherit;
+  font-weight: 300;
+  line-height: 1.2;
+  color: $textColor;
+  position: relative;
+
+  &::after {
+    position: absolute;
+    content: '';
+    width: 40%;
+    height: 3px;
+    bottom: -25px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    background: $primaryColor !important;
+  }
+
+  .title {
+    margin: 0;
+    font-size: 2rem;
+  }
+}
+
+

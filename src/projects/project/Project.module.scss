@@ -1,0 +1,85 @@
+@import '../../common/styles/sass/variables.sass';
+@import '../../common/styles/sass/mixins.sass';
+
+.project {
+  width: 250px;
+  background-color: $bgColor;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+
+  .icon {
+    width: 250px;
+    height: 250px;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+      &::before {
+          position: absolute;
+          content: "";
+          background-color: $bgColor;
+          top: 0;
+          bottom: 0;
+          left: 0;
+          right: 0;
+          opacity: 0.4;
+      }
+
+    .button {
+      width: 100px;
+      height: 40px;
+      margin: 0;
+      border: none;
+      border-radius: 20px;
+      color: #1f2235;
+      font-family: inherit, sans-serif;
+      font-size: 16px;
+      position: relative;
+      z-index: 1;
+      box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+    }
+
+    .button:hover {
+      background-color: #fd4a57;
+      color: $textColor;
+      border: 2px solid $primaryColor;
+      box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+    }
+
+    .button:active {
+      box-shadow: 0 5px #666;
+      transform: translateY(4px);
+    }
+  }
+
+
+  .projectInfo {
+    padding: 10px;
+
+    .projectTitle {
+      @include text(inherit, 1.25rem, 1.2)
+    }
+
+    .projectDescription {
+      @include text(Poppins, 16px, 1.2);
+      display: block;
+      margin-block-start: 1em;
+      margin-block-end: 1em;
+      margin-inline-start: 0;
+      margin-inline-end: 0;
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
