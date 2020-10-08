@@ -1,8 +1,15 @@
 import React from 'react';
 import styles from './SocialNetwork.module.css'
+import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 
-export const SocialNetwork = () => {
+type SocialNetworkPropsType = {
+    icon: any
+}
+
+export const SocialNetwork = (props: SocialNetworkPropsType) => {
     return (
-        <div className={styles.icon}>SN</div>
+        <div className={styles.socialNetwork}>
+            <FontAwesomeIcon icon={props.icon} size={"8x"} color={"white"}/>
+        </div>
     )
 }

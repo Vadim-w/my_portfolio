@@ -1,5 +1,13 @@
-.icon {
-    width: 100px;
-    height: 100px;
-    background-color: darkgrey;
+.socialNetwork {
+    width: 150px;
+    height: 150px;
+    /*background-color: darkgrey;*/
+    margin: 10px;
+    background-position: center;
+    background-size: cover;
+}
+
+.socialNetwork img{
+    width: 150px;
+    height: 150px;
 }

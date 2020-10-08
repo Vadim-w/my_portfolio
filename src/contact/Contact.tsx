@@ -24,24 +24,43 @@ export const Contact = () => {
             <div className={`${styleContainer.container} ${styles.contactContainer}`}>
                 <Title title={'Contact'}/>
                 <form className={styles.form} action=''>
-                    <input
-                        type="text"
-                        placeholder={"Your email"}
-                        name='contacts'
-                        onChange={(e) => onChangeContacts(e.currentTarget.value)}
-                    />
-                    <input
-                        type="text"
-                        placeholder={'Your name'}
-                        name='name'
-                        onChange={(e) => onChangeName(e.currentTarget.value)}
-                    />
-                    <textarea
-                        placeholder={'Please write what you want'}
-                        name='message'
-                        onChange={(e) => onChangeMessage(e.currentTarget.value)}
-                    />
-                    <input type='submit' className={styles.button} onClick={(e) => {
+                    <div className={styles.row}>
+                        <div className={styles.name}>
+                            <span className={styles.form_control}>
+                                <input
+                                    value={name}
+                                    type="text"
+                                    placeholder={'Your name'}
+                                    name='name'
+                                    onChange={(e) => onChangeName(e.currentTarget.value)}
+                                />
+                            </span>
+                        </div>
+                        <div className={styles.email}>
+                            <span className={styles.form_control}>
+                                <input
+                                    value={contacts}
+                                    type="text"
+                                    placeholder={"Your email"}
+                                    name='contacts'
+                                    onChange={(e) => onChangeContacts(e.currentTarget.value)}
+                                />
+                            </span>
+                        </div>
+                    </div>
+                    <div className={styles.messageBlock}>
+                        <textarea className={styles.messageForm}
+                                  aria-required={true}
+                                  aria-invalid={false}
+                                  cols={40}
+                                  rows={10}
+                                  value={message}
+                                  placeholder={'Your Message'}
+                                  name='message'
+                                  onChange={(e) => onChangeMessage(e.currentTarget.value)}
+                        />
+                    </div>
+                    <input type='submit' className={styles.button} value={"Send Message"} onClick={(e) => {
                         e.preventDefault();
                         axios.post('https://smtp-server-node.herokuapp.com/sendMessage', {name, message, contacts})
                             .then(() => {
