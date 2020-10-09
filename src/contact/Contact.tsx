@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import styles from './Contact.module.css'
+import styles from './Contact.module.scss'
 import styleContainer from '../common/styles/Container.module.css';
 import {Title} from '../common/components/title/Title';
 import axios from 'axios'
