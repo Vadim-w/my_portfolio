@@ -1,75 +1,96 @@
-import React, {useState} from 'react';
+import React from 'react';
 import styles from './Contact.module.scss'
 import styleContainer from '../common/styles/Container.module.css';
 import {Title} from '../common/components/title/Title';
 import axios from 'axios'
+import {useFormik} from "formik";
+
+type FormikErrorType = {
+    name?: string
+    contacts?: string
+    message?: string
+}
 
 export const Contact = () => {
-    let [contacts, setContacts] = useState<string>("")
-    let [name, setName] = useState<string>("")
-    let [message, setMessage] = useState<string>("")
 
-    const onChangeContacts = (value: string) => {
-        setContacts(value)
-    }
-    const onChangeName = (value: string) => {
-        setName(value)
-    }
-    const onChangeMessage = (value: string) => {
-        setMessage(value)
-    }
+    const formik = useFormik({
+        initialValues: {
+            name: '',
+            contacts: '',
+            message: ''
+        },
+        onSubmit: values => {
+            axios.post('https://smtp-server-node.herokuapp.com/sendMessage', values)
+                .then(() => {
+                    alert('Your message has been send :)')
+                })
+        },
+        validate: (values) => {
+            const errors: FormikErrorType = {};
+            if (!values.contacts) {
+                errors.contacts = 'Required';
+            } else if (!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(values.contacts)) {
+                errors.contacts = 'Invalid email address';
+            }
+            if (!values.name) {
+                errors.name = 'Required';
+            } else if (values.name.length > 20) {
+                errors.name = 'Must be 20 characters or less';
+            }
+            if (!values.message) {
+                errors.message = 'Required';
+            } else if (values.message.length < 10) {
+                errors.message = 'Must be at least 10 characters long';
+            }
+            return errors;
+        },
+    })
+
 
     return (
         <div className={styles.contactBlock}>
             <div className={`${styleContainer.container} ${styles.contactContainer}`}>
                 <Title title={'Contact'}/>
-                <form className={styles.form} action=''>
+                <form className={styles.form} onSubmit={formik.handleSubmit}>
                     <div className={styles.row}>
                         <div className={styles.name}>
                             <span className={styles.form_control}>
                                 <input
-                                    value={name}
+                                    id={'name'}
                                     type="text"
                                     placeholder={'Your name'}
-                                    name='name'
-                                    onChange={(e) => onChangeName(e.currentTarget.value)}
+                                    {...formik.getFieldProps('name')}
                                 />
+                                {formik.errors.name ? <div className={styles.error}>{formik.errors.name}</div> : null}
                             </span>
                         </div>
                         <div className={styles.email}>
                             <span className={styles.form_control}>
                                 <input
-                                    value={contacts}
+                                    id={'contacts'}
                                     type="text"
                                     placeholder={"Your email"}
-                                    name='contacts'
-                                    onChange={(e) => onChangeContacts(e.currentTarget.value)}
+                                    {...formik.getFieldProps('contacts')}
                                 />
+                                {formik.errors.contacts ?
+                                    <div className={styles.error}>{formik.errors.contacts}</div> : null}
                             </span>
                         </div>
                     </div>
                     <div className={styles.messageBlock}>
-                        <textarea className={styles.messageForm}
-                                  aria-required={true}
-                                  aria-invalid={false}
-                                  cols={40}
-                                  rows={10}
-                                  value={message}
-                                  placeholder={'Your Message'}
-                                  name='message'
-                                  onChange={(e) => onChangeMessage(e.currentTarget.value)}
-                        />
+                            <textarea className={styles.messageForm}
+                                      id={'message'}
+                                      aria-required={true}
+                                      aria-invalid={false}
+                                      cols={40}
+                                      rows={10}
+                                      placeholder={'Your Message'}
+                                      {...formik.getFieldProps('message')}
+                            />
+                        {formik.errors.message ? <div className={styles.error}>{formik.errors.message}</div> : null}
                     </div>
-                    <input type='submit' className={styles.button} value={"Send Message"} onClick={(e) => {
-                        e.preventDefault();
-                        axios.post('https://smtp-server-node.herokuapp.com/sendMessage', {name, message, contacts})
-                            .then(() => {
-                                alert('Your message has been send :)')
-                            })
-                    }}/>
+                    <button type='submit' className={styles.button} value={"Send Message"}>Send Message</button>
                 </form>
-
-
             </div>
         </div>
     )

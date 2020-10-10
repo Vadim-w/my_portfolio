@@ -18,14 +18,18 @@ export const Projects = () => {
             <div className={`${styleContainer.container} ${styles.projectsContainer}`}>
                 <Title title={"Projects"}/>
                 <div className={styles.projects}>
-                    <Project title={"TodoList"}
-                             style={todoListStyle}
-                             description={" nobis pra corporis deleniis qui quia veritatis?"
-                             }/>
-                    <Project title={"Social Network"}
-                             style={socialNetworkStyle}
-                             description={"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad inventore iste laudantium magni mollitia nobis praesentium, soluta voluptate? A assumenda, corporis deleniti harum iusto labore nulla perspiciatis qui quia veritatis?"
-                             }/>
+                    <Project
+                        link={'https://github.com/Vadim-w/TodoList'}
+                        title={"TodoList"}
+                        style={todoListStyle}
+                        description={" nobis pra corporis deleniis qui quia veritatis?"
+                        }/>
+                    <Project
+                        link={'https://github.com/Vadim-w/SocialNetwork'}
+                        title={"Social Network"}
+                        style={socialNetworkStyle}
+                        description={"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad inventore iste laudantium magni mollitia nobis praesentium, soluta voluptate? A assumenda, corporis deleniti harum iusto labore nulla perspiciatis qui quia veritatis?"
+                        }/>
                 </div>
             </div>
         </div>

@@ -33,6 +33,10 @@
 
           .form_control {
             position: relative;
+
+            .error {
+              color: red;
+            }
           }
         }
 
@@ -45,6 +49,10 @@
         .email {
           width: 40%;
           margin: 10px;
+
+          .error {
+            color: red;
+          }
         }
 
         @media screen and (max-width: 624px) {
@@ -64,8 +72,11 @@
 
       .messageBlock {
         display: flex;
-        flex-direction: row;
-        justify-content: center;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        align-items: flex-start;
+        align-content: center;
         width: 100%;
 
         .messageForm {
@@ -82,20 +93,22 @@
           font-size: inherit;
           line-height: inherit;
         }
+
+        .error {
+          color: red;
+        }
       }
 
       .button {
-        background-color: #ff4a57 !important;
-        color: #fff !important;
+        background-color: #ff4a57;
+        color: #fff;
         padding: 18px 60px;
         cursor: pointer;
-        display: inline-block;
         border-radius: 100px;
         border: none;
         font-family: inherit;
         font-size: inherit;
         line-height: inherit;
-
       }
     }
 
@@ -118,13 +131,6 @@
   }
 }
 
-//.contact {
-//    border: 1px solid;
-//    width: 100%;
-//    display: flex;
-//    justify-content: space-between;
-//    flex-wrap: wrap;
-//}
 
 
 

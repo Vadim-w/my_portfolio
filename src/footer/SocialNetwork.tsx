@@ -9,7 +9,7 @@ type SocialNetworkPropsType = {
 export const SocialNetwork = (props: SocialNetworkPropsType) => {
     return (
         <div className={styles.socialNetwork}>
-            <FontAwesomeIcon icon={props.icon} size={"8x"} color={"white"}/>
+            <FontAwesomeIcon icon={props.icon} size={"7x"} color={"white"}/>
         </div>
     )
 }
