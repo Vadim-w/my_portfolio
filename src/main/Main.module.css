@@ -12,8 +12,12 @@
 
 .text {
     display: flex;
-    width: 300px;
+    flex-direction: column;
+    width: 30%;
     background-color: azure;
+}
+.text h1 {
+    font-size: 30px;
 }
 
 .photo {

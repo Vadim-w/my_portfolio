@@ -1,24 +1,15 @@
 import React from 'react';
 import styles from './Skills.module.css'
-import styleContainer from '../common/styles/Container.module.css'
+import styleContainer from '../common/styles/Container.module.scss'
 import {Skill} from "./skill/Skill";
 import {Title} from "../common/components/title/Title";
-import {
-    faCss3Alt,
-    faGithub,
-    faGithubAlt,
-    faHtml5,
-    faInstagram,
-    faJs, faLinkedin,
-    faReact, faVk
-} from "@fortawesome/free-brands-svg-icons";
-import {faAd, faAsterisk, faCoffee} from '@fortawesome/free-solid-svg-icons'
+import {faCss3Alt, faGithub, faHtml5, faJs, faReact,} from "@fortawesome/free-brands-svg-icons";
 
 export const Skills = () => {
     return (
-        <div className={styles.skillsBlock}>
+        <div className={styles.skillsBlock} id='skills'>
             <div className= {`${styleContainer.container} ${styles.skillsContainer}`}>
-                <Title title={"Skills"}/>
+                <Title title={"Skills"} />
                 <div className={styles.skills}>
                     <Skill
                         icon={faHtml5}

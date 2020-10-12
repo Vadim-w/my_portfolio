@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from './Contact.module.scss'
-import styleContainer from '../common/styles/Container.module.css';
+import styleContainer from '../common/styles/Container.module.scss';
 import {Title} from '../common/components/title/Title';
 import axios from 'axios'
 import {useFormik} from "formik";
@@ -48,7 +48,7 @@ export const Contact = () => {
 
 
     return (
-        <div className={styles.contactBlock}>
+        <div className={styles.contactBlock} id='contact'>
             <div className={`${styleContainer.container} ${styles.contactContainer}`}>
                 <Title title={'Contact'}/>
                 <form className={styles.form} onSubmit={formik.handleSubmit}>

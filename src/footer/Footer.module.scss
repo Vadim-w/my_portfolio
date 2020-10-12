@@ -1,0 +1,38 @@
+.footerBlock {
+  min-height: 50vh;
+  background-color: #23263a;
+
+  .footerContainer {
+    padding-top: 10vh;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
+
+    .socialNetworks {
+      margin: 5vh 0 5vh 0;
+      border: 1px solid;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+
+    @media screen and (max-width: 400px) {
+      .socialNetworks {
+        align-content: center;
+        flex-direction: column;
+      }
+
+    }
+
+    .copyright {
+      margin-bottom: 2vh;
+      color: white;
+    }
+  }
+}
+
+
+
+
+
