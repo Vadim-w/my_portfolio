@@ -1,30 +1,57 @@
 .mainBlock {
-    height: 100vh;
+    /*min-height: 100vh;*/
     background-color: #23263a;
 }
 
 .mainContainer {
+    min-height: 100vh;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-content: space-around;
 }
+@media screen and (max-width: 750px) {
+    .mainContainer {
+        justify-content: center;
+        flex-direction: column;
+        min-height: 600px
+    }
+}
 
 .text {
+    padding-top: 30px;
     display: flex;
     flex-direction: column;
-    width: 30%;
-    background-color: azure;
-}
+    width: 50%;
+    color: white;
+    font-size: 26px;
+    }
 .text h1 {
-    font-size: 30px;
+    font-size: 58px;
+    font-family: inherit;
+}
+@media screen and (max-width: 768px) {
+    .text h1 {
+        padding-top: 30px;
+        text-align: center;
+        font-size: 40px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .text {
+        text-align: center;
+    }
 }
 
 .photo {
     display: flex;
-    width: 300px;
-    height: 400px;
+    width: 400px;
+    height: 600px;
     background-color: darkgrey;
+    margin-bottom: 30px;
+    background-size: cover;
+    background-position: center;
 }
 
 @media screen and (max-width: 751px){

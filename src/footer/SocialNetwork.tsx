@@ -10,7 +10,7 @@ type SocialNetworkPropsType = {
 export const SocialNetwork = (props: SocialNetworkPropsType) => {
     return (
         <div className={styles.socialNetwork}>
-            <a href={props.link}>
+            <a href={props.link} target='_blank'>
                 <FontAwesomeIcon
                     icon={props.icon}
                     size={"7x"}

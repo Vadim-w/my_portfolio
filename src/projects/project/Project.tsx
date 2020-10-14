@@ -12,7 +12,7 @@ export const Project = (props: projectPropsType) => {
     return (
         <div className={styles.project}>
             <div className={styles.icon} style={props.style}>
-                <a href={props.link} className={styles.button}>Look</a>
+                <a target='_blank'   href={props.link} className={styles.button}>Look</a>
             </div>
             <div className={styles.projectInfo}>
                 <h3 className={styles.projectTitle}>{props.title}</h3>
