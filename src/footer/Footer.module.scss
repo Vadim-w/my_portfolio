@@ -10,7 +10,6 @@
 
     .socialNetworks {
       margin: 5vh 0 5vh 0;
-      border: 1px solid;
       width: 100%;
       display: flex;
       justify-content: space-between;
@@ -28,6 +27,7 @@
     .copyright {
       margin-bottom: 2vh;
       color: white;
+      text-align: center;
     }
   }
 }

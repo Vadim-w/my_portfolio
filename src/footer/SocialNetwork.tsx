@@ -13,8 +13,10 @@ export const SocialNetwork = (props: SocialNetworkPropsType) => {
             <a href={props.link} target='_blank'>
                 <FontAwesomeIcon
                     icon={props.icon}
-                    size={"7x"}
-                    color={"white"}/>
+                    size={"4x"}
+                    color={"white"}
+                    underlinePosition={"center"}
+                />
             </a>
         </div>
     )

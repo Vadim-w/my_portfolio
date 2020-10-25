@@ -40,7 +40,7 @@
           }
         }
 
-        @media screen and (max-width: 624px) {
+        @media screen and (max-width: 767px) {
           .name {
             width: 100%;
           }
@@ -55,14 +55,14 @@
           }
         }
 
-        @media screen and (max-width: 624px) {
+        @media screen and (max-width: 767px) {
           .email {
             width: 100%;
           }
         }
       }
 
-      @media screen and (max-width: 624px) {
+      @media screen and (max-width: 767px) {
         .row {
           align-content: center;
           flex-direction: column;
@@ -96,7 +96,14 @@
 
         .error {
           color: red;
+
         }
+      }
+      @media screen and (max-width: 480px) {
+        .messageBlock {
+          height: 200px;
+        }
+
       }
 
       .button {
@@ -129,6 +136,18 @@
 
     }
   }
+}
+@media screen and (max-width: 767px) {
+  .contactBlock {
+    min-height: 120vh;
+  }
+
+}
+@media screen and (max-width: 480px) {
+  .contactBlock {
+    min-height: 130vh;
+  }
+
 }
 
 

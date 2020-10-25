@@ -1,0 +1,74 @@
+.mainBlock {
+    background-color: #23263a;
+    .mainContainer {
+        min-height: 100vh;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-content: space-around;
+        .text {
+            padding-top: 30px;
+            display: flex;
+            flex-direction: column;
+            width: 50%;
+            color: white;
+            font-size: 26px;
+            h1 {
+                font-size: 58px;
+                font-family: inherit;
+            }
+            @media screen and (max-width: 768px) {
+                h1 {
+                    padding-top: 30px;
+                    text-align: center;
+                    font-size: 40px;
+                }
+            }
+        }
+        @media screen and (max-width: 768px) {
+            .text {
+                text-align: center;
+            }
+        }
+        .photo {
+            display: flex;
+            width: 400px;
+            height: 600px;
+            background-color: darkgrey;
+            margin-bottom: 30px;
+            background-size: cover;
+            background-position: center;
+        }
+        @media screen and (max-width: 480px) {
+            .photo {
+                width: 100%;
+                height: 460px;
+            }
+        }
+
+
+    }
+    @media screen and (max-width: 750px) {
+        .mainContainer {
+            justify-content: center;
+            flex-direction: column;
+            min-height: 600px
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 751px){
+    .mainBlock{
+        flex-direction: column;
+        align-content: center;
+    }
+}
