@@ -78,6 +78,7 @@ export const Contact = () => {
                         </div>
                     </div>
                     <div className={styles.messageBlock}>
+                        <span className={styles.form_control}>
                             <textarea className={styles.messageForm}
                                       id={'message'}
                                       aria-required={true}
@@ -88,6 +89,7 @@ export const Contact = () => {
                                       {...formik.getFieldProps('message')}
                             />
                         {formik.errors.message ? <div className={styles.error}>{formik.errors.message}</div> : null}
+                        </span>
                     </div>
                     <button type='submit' className={styles.button} value={"Send Message"}>Send Message</button>
                 </form>

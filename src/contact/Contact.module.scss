@@ -80,6 +80,7 @@
         width: 100%;
 
         .messageForm {
+          position: center;
           border: none;
           width: 76%;
           background: #23263a;
@@ -93,10 +94,13 @@
           font-size: inherit;
           line-height: inherit;
         }
+        .form_control {
+          width: 100%;
+        }
 
         .error {
           color: red;
-
+          margin-bottom: 50px;
         }
       }
       @media screen and (max-width: 480px) {
@@ -107,6 +111,7 @@
       }
 
       .button {
+        margin-top: 100px;
         background-color: #ff4a57;
         color: #fff;
         padding: 18px 60px;
@@ -145,7 +150,7 @@
 }
 @media screen and (max-width: 480px) {
   .contactBlock {
-    min-height: 130vh;
+    min-height: 150vh;
   }
 
 }

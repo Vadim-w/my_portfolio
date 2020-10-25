@@ -16,12 +16,11 @@
       flex-wrap: wrap;
     }
 
-    @media screen and (max-width: 423px) {
+    @media screen and (max-width: 480px) {
       .socialNetworks {
         align-content: center;
         flex-direction: column;
       }
-
     }
 
     .copyright {
